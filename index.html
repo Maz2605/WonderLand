@@ -23,16 +23,16 @@
                     </ul>
                 </li>
             </ul>
-            <div class="Logo">
+            <button onclick="goToPage('index.html')" class="Logo">
                 <img src="/assets/Logo.jpeg" alt="Logo">
-            </div>
+            </button>
             <ul class="main_menu">
                 <li><a href="#">DÀNH CHO BẠN</a></li>
                 <li><a href="#">HỆ THỐNG CỬA HÀNG</a></li>
                 <li><a href="#">LIÊN HỆ</a></li>
             </ul>
             <div class="Cart">
-                <button class="Cart">
+                <button class="Cart" onclick="goToPage('cart.html')">
                     Giỏ hàng 
                     <i class="fa-solid fa-cart-shopping"></i>
                 </button>
@@ -58,13 +58,18 @@
                     </div>
                 </div>
                 <div class="box_button">
-                    <button>
+                    <button onclick="goToPage()">
                         Khám phá
                     </button>
                 </div>
             </div>
             <div class="GT_right">
                 <img src="/assets/Logo.jpeg" alt="logo">
+                <div class="text3">
+                    <p>
+                        Wonderland đặt mục tiêu trở thành thương hiệu dinh dưỡng hàng đầu tại Việt Nam và mở rộng ra thị trường quốc tế
+                    </p>
+                </div>
             </div>
             </div>
         </Section>
@@ -72,25 +77,89 @@
             <div class="text">
                 <h2>Sản phẩm</h2>
             </div>
-            <div class="boxSP">
-                <div class="img">
-                    <img src="/assets/Picture1.png" alt="sp">
+            <div class="container">
+                <div class="boxSP">
+                    <div class="img">
+                        <img src="/assets/Picture1.png" alt="sp">
+                    </div>
+                    <div class="text2">
+                        <h3>Sữa chua sấy vị phô mai</h3>
+                    </div>
                 </div>
-                <div class="name">
-                    <h3>Sữa chua sấy phô mai</h3>
+                <div class="boxSP">
+                    <div class="img">
+                        <img src="/assets/Picture2.png" alt="sp">
+                    </div>
+                    <div class="text2">
+                        <h3>Sữa chua sấy vị trái cây</h3>
+                    </div>
                 </div>
-                <div class="price">
-                    100.000.000 đ
+                <div class="boxSP">
+                    <div class="img">
+                        <img src="/assets/Picture3.png" alt="sp">
+                    </div>
+                    <div class="text2">
+                        <h3>Sữa chua vị đông trùng hạ thảo</h3>
+                    </div>
                 </div>
             </div>
         </Section>
-        <Section id="Tam_nhin">
-
-        </Section>
+    
     </main>
-    <footer>
 
-    </footer>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+            <h2>Wonder Land</h2>
+            <p>Giòn tan từng miếng – Trọn vẹn dinh dưỡng!</p>
+            </div>
+            <div class="footer-mid">
+            <h3>Bạn cần hỗ trợ</h3>
+            <p class="hotline">1900 0000</p>
+            <p><strong>Địa chỉ:</strong> 70 Lu Gia, Ward 15, District 11, Ho Chi Minh City</p>
+            <p><strong>Email:</strong> support@WonderLand.vn</p>
+            <div class="socials">
+                <i>🌐</i>
+                <i>🐦</i>
+                <i>📷</i>
+                <i>▶️</i>
+                <i>📱</i>
+            </div>
+            <div class="payments">
+                <img src="/assets//Payment.jpg" alt="">
+            </div>
+            </div>
+        
+            <div class="footer-right">
+            <div>
+                <h3>Hướng dẫn mua hàng</h3>
+                <ul>
+                <li>Trang chủ</li>
+                <li>Giới thiệu</li>
+                <li>Danh mục</li>
+                <li>Tin tức</li>
+                <li>Liên hệ</li>
+                <li>Hướng dẫn sử dụng</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Hỗ trợ khách hàng</h3>
+                <ul>
+                <li>Trang chủ</li>
+                <li>Giới thiệu</li>
+                <li>Danh mục</li>
+                <li>Tin tức</li>
+                <li>Liên hệ</li>
+                <li>Hướng dẫn sử dụng</li>
+                </ul>
+            </div>
+            </div>
+        </div>
+        <div class="copyright">
+            © Bản quyền thuộc về WonderLand | Cung cấp bởi Maz
+        </div>
+        </footer>
+
     <script src="script.js"></script>
 </body>
 </html>

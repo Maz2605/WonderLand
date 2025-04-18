@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chọn Sản Phẩm và Khối Lượng</title>
+    <style>
+        .product-page { max-width: 600px; margin: 20px auto; font-family: Arial, sans-serif; }
+        .product-image img { width: 100%; max-width: 400px; height: auto; }
+        .product-details { margin-top: 20px; }
+        .variants, .weight { margin: 10px 0; }
+        select { padding: 5px; font-size: 16px; }
+        .price { font-size: 18px; font-weight: bold; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <div class="product-page">
+        <div class="product-image">
+            <img id="main-image" src="/assets/Logo.jpeg" alt="Product Image">
+        </div>
+        <div class="product-details">
+            <h1 id="product-title">Chọn sản phẩm</h1>
+            <div class="variants">
+                <label for="product-select">Sản phẩm:</label>
+                <select id="product-select">
+                    <option value="product1">Sữa chua sấy vị phô mai</option>
+                    <option value="product2">Sữa chua sấy vị trái cây mix</option>
+                    <option value="product3">Sữa chua sấy vị đông trùng hạ thảo</option>
+                </select>
+        </div>
+        <div class="weight">
+            <label for="weight-select">Khối lượng:</label>
+            <select id="weight-select">
+                    <option value="50g">50g</option>
+                    <option value="100g">100g</option>
+                </select>
+            </div>
+            <div class="price">
+                <span id="current-price">Chọn sản phẩm và khối lượng</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const productData = {
+            "product1": {
+                name: "Sữa chua sấy vị phô mai",
+                image: "/assets/Picture1.png",
+                prices: {
+                    "50g": "₫60,000",
+                    "100g": "₫115,000"
+                }
+            },
+            "product2": {
+                name: "Sữa chua sấy vị trái cây mix",
+                image: "/assets/Picture2.png",
+                prices: {
+                    "50g": "₫65,000",
+                    "100g": "₫125,000"
+                }
+            },
+            "product3": {
+                name: "Sữa chua sấy đông trùng hạ thảo",
+                image: "/assets/Picture3.png",
+                prices: {
+                    "50g": "₫90,000",
+                    "100g": "₫170,000"
+                }
+            }
+        };
+
+        document.getElementById('product-select').addEventListener('change', updateProduct);
+        document.getElementById('weight-select').addEventListener('change', updatePrice);
+
+        function updateProduct() {
+            const productId = document.getElementById('product-select').value;
+            const product = productData[productId];
+            document.getElementById('product-title').textContent = product.name;
+            document.getElementById('main-image').src = product.image;
+            updatePrice();
+        }
+
+        function updatePrice() {
+            const productId = document.getElementById('product-select').value;
+            const weight = document.getElementById('weight-select').value;
+            const product = productData[productId];
+            const price = product.prices[weight];
+            document.getElementById('current-price').textContent = price;
+        }
+
+        // Khởi tạo với sản phẩm đầu tiên
+        updateProduct();
+    </script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/assets/Logo.jpeg" type="icon/x-icon">
+  <link rel="stylesheet" href="/styleCart.css">
+  <title>Giỏ hàng</title>
+</head>
+
+<body>
+  <header>
+    <menu id="mainMenu">
+      <ul class="main_menu">
+        <li><a href="#Gioi_thieu">GIỚI THIỆU</a></li>
+        <li><a href="#">VỀ CHÚNG TÔI</a></li>
+        <li>
+          <a href="#">SẢN PHẨM</a>
+          <ul class="sub_menu">
+            <li><a href="#">Sữa chua sấy vị phô mai</a></li>
+            <li><a href="#">Sữa chua sấy vị trái cây</a></li>
+            <li><a href="#">Sữa chua sấy vị đông trùng hạ thảo</a></li>
+          </ul>
+        </li>
+      </ul>
+      <button onclick="goToPage('index.html')" class="Logo">
+        <img src="/assets/Logo.jpeg" alt="Logo">
+      </button>
+      <ul class="main_menu">
+        <li><a href="#">DÀNH CHO BẠN</a></li>
+        <li><a href="#">HỆ THỐNG CỬA HÀNG</a></li>
+        <li><a href="#">LIÊN HỆ</a></li>
+      </ul>
+      <div class="Cart">
+        <button class="Cart">
+          Giỏ hàng
+          <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+      </div>
+    </menu>
+
+  </header>
+  <main>
+    <div class="product-page">
+      <div class="product-image">
+        <img id="main-image" src="/assets/Logo.jpeg" alt="Product Image">
+      </div>
+      <div class="space"></div>
+      <div class="product-details">
+        <h1 id="product-title">Chọn sản phẩm</h1>
+        <div class="variants">
+          <label for="product-select">Sản phẩm:</label>
+          <div class="space3"></div>
+          <select id="product-select">
+            <option value="product1">Sữa chua sấy vị phô mai</option>
+            <option value="product2">Sữa chua sấy vị trái cây mix</option>
+            <option value="product3">Sữa chua sấy vị đông trùng hạ thảo</option>
+          </select>
+        </div>
+        <div class="weight">
+          <label for="weight-select">Khối lượng:</label>
+          <select id="weight-select">
+            <option value="50g">50g</option>
+            <option value="100g">100g</option>
+          </select>
+        </div>
+        <div class="price">
+          <p>Đơn giá:</p>
+          <div class="space1"></div>
+          <span id="current-price"></span>
+        </div>
+        <div class="quantity">
+          <div class="text"><p>Số lượng:</p></div>
+          <div class="space1"></div>
+          <div class="quantity-controls">
+            <button class="dau" id="decrease">-</button>
+            <input type="number" id="quantity-input" value="1" min="1">
+            <button class="dau" id="increase">+</button>
+          </div>
+        </div>
+        <div class="price">
+        </div>
+        <div class="last-line">
+          <div class="total-price">
+            <span id="total-price">Tổng giá: 0 ₫</span>
+            
+          </div>
+          <button onclick="goToPage('done.html')" class="dat">
+            Đặt hàng
+          </button>          
+        </div>
+
+        
+      </div>
+
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <h2>Wonder Land</h2>
+        <p>Giòn tan từng miếng – Trọn vẹn dinh dưỡng!</p>
+      </div>
+      <div class="footer-mid">
+        <h3>Bạn cần hỗ trợ</h3>
+        <p class="hotline">1900 0000</p>
+        <p><strong>Địa chỉ:</strong> 70 Lu Gia, Ward 15, District 11, Ho Chi Minh City</p>
+        <p><strong>Email:</strong> support@WonderLand.vn</p>
+        <div class="socials">
+          <i>🌐</i>
+          <i>🐦</i>
+          <i>📷</i>
+          <i>▶️</i>
+          <i>📱</i>
+        </div>
+        <div class="payments">
+          <img src="/assets//Payment.jpg" alt="">
+        </div>
+      </div>
+
+      <div class="footer-right">
+        <div>
+          <h3>Hướng dẫn mua hàng</h3>
+          <ul>
+            <li>Trang chủ</li>
+            <li>Giới thiệu</li>
+            <li>Danh mục</li>
+            <li>Tin tức</li>
+            <li>Liên hệ</li>
+            <li>Hướng dẫn sử dụng</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Hỗ trợ khách hàng</h3>
+          <ul>
+            <li>Trang chủ</li>
+            <li>Giới thiệu</li>
+            <li>Danh mục</li>
+            <li>Tin tức</li>
+            <li>Liên hệ</li>
+            <li>Hướng dẫn sử dụng</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      © Bản quyền thuộc về WonderLand | Cung cấp bởi Maz
+    </div>
+  </footer>
+  <Script src="script.js"></Script>
+</body>
+
+</html>
