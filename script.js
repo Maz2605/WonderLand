@@ -6,7 +6,7 @@ function goToPage(link) {
 const productData = {
   "product1": {
       name: "Sữa chua sấy vị phô mai",
-      image: "assets/Picture1.png",
+      image: "assets//Picture1.png",
       prices: {
           "50g": 60000,
           "100g": 115000
@@ -14,7 +14,7 @@ const productData = {
   },
   "product2": {
       name: "Sữa chua sấy vị trái cây mix",
-      image: "assets/Picture2.png",
+      image: "assets//Picture2.png",
       prices: {
           "50g": 65000,
           "100g": 125000
@@ -22,7 +22,7 @@ const productData = {
   },
   "product3": {
       name: "Sữa chua sấy đông trùng hạ thảo",
-      image: "assets/Picture3.png",
+      image: "assets//Picture3.png",
       prices: {
           "50g": 90000,
           "100g": 170000
